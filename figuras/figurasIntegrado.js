@@ -69,3 +69,29 @@ function calcularAreaCirculo() {
     const area = Math.pow(radioCirculo, 2) * pi;
     alert("El area del circulo es: " + area);
 }
+
+//Reto: calcular altura de un triangulo isosceles
+
+function calcularAlturaTriangulo() {
+    const ladoTriangulo1 = document.getElementById("lado1");
+    const ladoTriangulo2 = document.getElementById("lado2");
+    const ladoTriangulo3 = document.getElementById("lado3");
+    const lado1 = parseFloat(ladoTriangulo1.value);
+    const lado2 = parseFloat(ladoTriangulo2.value);
+    const lado3 = parseFloat(ladoTriangulo3.value);
+
+    if (lado1 == lado2) {
+        calcularTeorema(lado1, lado3);
+    } else if (lado1 == lado3) {
+        calcularTeorema(lado1, lado2);
+    } else if (lado2 == lado3) {
+        calcularTeorema(lado2, lado1);
+    } else {
+        alert("Al menos dos lados deben ser iguales");
+    }
+}
+
+function calcularTeorema(a, b) {
+    const altura = Math.sqrt(Math.pow(a, 2) - (Math.pow(b, 2) / 4));
+    alert("La altura del triangulo es: " + altura);
+}
