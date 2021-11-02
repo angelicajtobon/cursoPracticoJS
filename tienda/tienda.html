@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de descuentos | Curso practico de JS</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Porcentajes y descuentos
+        </h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Esta es la calculadora de los precios con descuentos.
+            </p>
+            <label for="precioOriginal">
+                <span>Ingresa el precio orignal del producto</span>
+                <input type="number" id="precioOriginal">
+            </label>
+            <label for="descuento">
+                <span>Ingresa el descuento que deseas calcular</span>
+                <input type="number" id="descuento" placeholder="%">
+            </label>
+            <br>
+            <button onclick="calcularDescuento()">Calcular valor a pagar</button>
+        </div>
+    </section>
+
+
+
+    <script src="./tienda1.js"></script>
+</body>
+
+</html>
