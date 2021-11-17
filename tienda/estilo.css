@@ -1,6 +1,6 @@
 :root {
     --colorPrimario: darkcyan;
-    --colorSecundario: rgb(246, 245, 245);
+    --colorSecundario: rgb(240, 238, 238);
     --colorTerciario: rgb(4, 197, 197);
     --colorEnsayo: rgba(255, 255, 255, 0.972);
 }
@@ -43,10 +43,9 @@ div {
     margin: 10px auto;
     width: 80%;
     padding: 20px;
-    border: 5px var(--colorPrimario);
     border-radius: 10px;
     text-align: center;
-    background: var(--colorTerciario);
+    background: rgb(3, 106, 114);
 }
 
 p {
@@ -76,7 +75,7 @@ input {
 
 button {
     margin: 20px auto;
-    width: 200px;
+    width: 300px;
     height: 30px;
     border: none;
     border-radius: 3px;
@@ -85,4 +84,21 @@ button {
     font-weight: bold;
     background: var(--colorSecundario);
     color: var(--colorPrimario);
+}
+
+.resultado {
+    margin: 20px auto;
+    padding: 20px;
+    height: 80px;
+    border: 3px solid var(--colorPrimario);
+    background: var(--colorSecundario);
+    text-align: center;
+    color: var(--colorPrimario);
+    font-size: 2.0rem;
+    font-weight: bolder;
+}
+
+.cupones {
+    color: rgb(228, 149, 149);
+    font-size: 2rem;
 }

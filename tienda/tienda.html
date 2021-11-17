@@ -30,7 +30,35 @@
             </label>
             <br>
             <button onclick="calcularDescuento()">Calcular valor a pagar</button>
+            <div class="resultado" id="resultado">
+
+            </div>
+            <p>
+                En esta seccion puedes calcular los precios con descuentos con cupones.
+            </p>
+            <span>
+                Estos son los cupones disponibles:
+            </span>
+            <p class="cupones">
+                buenDescuento 15%
+            </p>
+            <p class="cupones">
+                SALE 20%
+            </p>
+            <p class="cupones">
+                comprarNoEsTanBueno 30%
+            </p>
+            <span>Ingresa el codigo del cupon</span>
+            <input type="text" id="cupon">
+            <button onclick="calcularDescuentoCupones()">Calcular descuento con cupon</button>
+            <div class="resultado" id="resultadoCupones">
+
+            </div>
+
+
+
         </div>
+
     </section>
 
 
