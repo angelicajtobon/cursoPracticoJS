@@ -8,7 +8,7 @@ Taller 3: formulas estadisticos
 
 const lista1 = [
     250,
-    500,
+    100,
     100,
     200,
     300,
@@ -49,14 +49,14 @@ function esPar(numero) {
     return validacion;
 }
 
-function comparar(elementoA, elementoB) {
+function ordenar(elementoA, elementoB) {
     return elementoA - elementoB;
 }
 
 
 function calcularMediana(lista) {
     let mediana;
-    lista.sort(comparar);
+    lista.sort(ordenar);
     console.log(lista);
     let mitadLista = lista.length / 2;
     let mitad = parseInt(mitadLista);
@@ -73,8 +73,57 @@ function calcularMediana(lista) {
 
 calcularMediana(lista1);
 
+
+/*function comparar(elementoAnterior, elementoSiguiente) {
+    let acumulador = 0;
+    let lista = [];
+    let organizador = {};
+    if (elementoAnterior == elementoSiguiente) {
+        lista[acumulador] += 1;
+
+        return console.log("la moda es: " + elementoSiguiente + "se repite " + lista[acumulador] + " veces");
+    } else {
+        lista[acumulador] = lista[acumulador];
+    }
+    console.log(lista);
+}*/
+
 function calcularModa(lista) {
+    const listaContador = {};
+
+    lista.map(
+        function(elemento) {
+            if (listaContador[elemento]) {
+                listaContador[elemento] += 1;
+            } else {
+                listaContador[elemento] = 1;
+            }
+
+        }
+
+    );
+    //Convertir el objeto en arreglo
+    const listaArreglo = Object.entries(listaContador);
+    listaArreglo.sort(function(a, b) {
+        return a[1] - b[1];
+    });
+    console.log(listaArreglo[listaArreglo.length - 1])
 
 }
 
 calcularModa(lista1);
+
+// RETO: Elegir otro tipo de promedio para trabajar
+//MEDIA ARMONICA
+
+function calcularMediaArmonica(lista) {
+    let mediaArmonica = 0;
+    let acumulardor = 0;
+    lista.forEach(function(elemento) {
+        acumulardor += (1 / elemento)
+    });
+    mediaArmonica = lista.length / acumulardor;
+    console.log("la media armonica es: " + mediaArmonica);
+};
+
+calcularMediaArmonica(lista1);
